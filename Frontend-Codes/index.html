@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coutiato Course Recommendation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <header>
+      <h1>Coutiato Course Recommender</h1>
+      <div class="step-bar">
+        <div class="step active">Step 1: Personal Info</div>
+        <div class="step">Step 2: Academic Info</div>
+        <div class="step">Step 3: Interests</div>
+        <div class="step">Step 4: Summary and Recommendation</div>
+      </div>
+    </header>
+
+    <form id="recommendation-form">
+
+      <!-- Step 1: Personal Information -->
+      <div class="form-step" style="display: block;">
+        <label>👤 Full Name</label>
+        <input type="text" name="name" required />
+
+        <label>📧 Email</label>
+        <input type="email" name="email" required />
+
+        <label>📱 Contact Number</label>
+        <input type="text" name="contact" required />
+
+        <label>🏠 County</label>
+        <input type="text" name="county" required />
+
+        <label>🌍 Ethnicity</label>
+        <input type="text" name="ethnicity" required />
+
+        <label>🗳️ Constituency</label>
+        <input type="text" name="constituency" required />
+      </div>
+
+      <!-- Step 2: Academic Info -->
+      <div class="form-step">
+        <label>🎯 Enter your total cluster points</label>
+        <input type="number" id="cluster" name="cluster" min="0" max="84" required />
+
+        <label>📘 Select subjects</label>
+        <div class="category">
+            <strong>STEM</strong>
+            <label><input type="checkbox" name="subjects" value="Mathematics" /> Mathematics</label>
+            <label><input type="checkbox" name="subjects" value="Biology" /> Biology</label>
+            <label><input type="checkbox" name="subjects" value="Chemistry" /> Chemistry</label>
+            <label><input type="checkbox" name="subjects" value="Physics" /> Physics</label>
+            <label><input type="checkbox" name="subjects" value="General Science" /> General Science</label>
+            <label><input type="checkbox" name="subjects" value="Agriculture" /> Agriculture</label>
+            <label><input type="checkbox" name="subjects" value="Computer Science" /> Computer Science</label>
+            <label><input type="checkbox" name="subjects" value="Home Science" /> Home Science</label>
+            <label><input type="checkbox" name="subjects" value="Aviation" /> Aviation</label>
+            <label><input type="checkbox" name="subjects" value="Power Mechanics" /> Power Mechanics</label>
+            <label><input type="checkbox" name="subjects" value="Media Technology" /> Media Technology</label>
+            <label><input type="checkbox" name="subjects" value="Marine and Fisheries Technology" /> Marine and Fisheries Technology</label>
+            <label><input type="checkbox" name="subjects" value="Building Construction" /> Building Construction</label>
+            <label><input type="checkbox" name="subjects" value="Electricity" /> Electricity</label>
+            <label><input type="checkbox" name="subjects" value="Metal Work" /> Metal Work</label>
+            <label><input type="checkbox" name="subjects" value="Wood Work" /> Wood Work</label>
+          </div>
+        <div class="category">
+            <strong>Social Sciences</strong>
+            <label><input type="checkbox" name="subjects" value="Business Studies" /> Business Studies</label>
+            <label><input type="checkbox" name="subjects" value="History and Citizenship" /> History and Citizenship</label>
+            <label><input type="checkbox" name="subjects" value="Geography" /> Geography</label>
+            <label><input type="checkbox" name="subjects" value="Christian Religious Education (CRE)" /> CRE</label>
+            <label><input type="checkbox" name="subjects" value="Islamic Religious Education (IRE)" /> IRE</label>
+            <label><input type="checkbox" name="subjects" value="Hindu Religious Education (HRE)" /> HRE</label>
+            <label><input type="checkbox" name="subjects" value="Community Service Learning (CSL)" /> CSL</label>
+            <label><input type="checkbox" name="subjects" value="English Language" /> English</label>
+            <label><input type="checkbox" name="subjects" value="Literature in English" /> Literature</label>
+            <label><input type="checkbox" name="subjects" value="Lugha ya Kiswahili" /> Lugha ya Kiswahili</label>
+            <label><input type="checkbox" name="subjects" value="Fasihi ya Kiswahili" /> Fasihi ya Kiswahili</label>
+            <label><input type="checkbox" name="subjects" value="Indigenous Languages" /> Indigenous Languages</label>
+            <label><input type="checkbox" name="subjects" value="Sign Language" /> Sign Language</label>
+            <label><input type="checkbox" name="subjects" value="Arabic" /> Arabic</label>
+            <label><input type="checkbox" name="subjects" value="French" /> French</label>
+            <label><input type="checkbox" name="subjects" value="German" /> German</label>
+            <label><input type="checkbox" name="subjects" value="Mandarin Chinese" /> Mandarin Chinese</label>
+          </div>
+        <div class="category">
+            <strong>Arts and Sports Science</strong>
+            <label><input type="checkbox" name="subjects" value="Fine Arts" /> Fine Arts</label>
+            <label><input type="checkbox" name="subjects" value="Music and Dance" /> Music and Dance</label>
+            <label><input type="checkbox" name="subjects" value="Theatre and Film" /> Theatre and Film</label>
+            <label><input type="checkbox" name="subjects" value="Physical Education" /> Physical Education</label>
+            <label><input type="checkbox" name="subjects" value="Sports and Recreation" /> Sports and Recreation</label>
+          </div>
+      </div>
+
+      <!-- Step 3: Interests -->
+      <div class="form-step">
+        <label>💡 Select up to 3 interests</label>
+        <select id="interests" name="interests" multiple required>
+          <option value="Coding">Coding</option>
+          <option value="Farming">Farming</option>
+          <option value="Drawing">Drawing</option>
+          <option value="Teaching">Teaching</option>
+          <option value="Business">Business</option>
+          <option value="Fashion">Fashion</option>
+        </select>
+
+        <label>✍️ Other Interests (optional)</label>
+        <input type="text" id="other-interest" name="other-interest" />
+      </div>
+
+      <!-- Step 4: Summary -->
+      <div class="form-step">
+        <div id="summary"></div>
+        <blockquote>
+          🎉 “The future belongs to those who believe in the beauty of their dreams.” – Eleanor Roosevelt
+        </blockquote>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="form-navigation">
+        <button type="button" id="prevBtn">Back</button>
+        <button type="button" id="nextBtn">Next</button>
+      </div>
+    </form>
+
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

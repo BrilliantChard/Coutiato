@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #fff3e0);
+    color: #333;
+  }
+  
+  .form-container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 40px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 28px;
+    color: #00796b;
+  }
+  
+  .step-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 3px solid #ccc;
+  }
+  
+  .step.active {
+    font-weight: bold;
+    border-color: #00796b;
+    color: #00796b;
+  }
+  
+  label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  select[multiple] {
+    height: 120px;
+  }
+  
+  .category {
+    margin-bottom: 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #004d40;
+  }
+  
+  .form-navigation {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  blockquote {
+    font-style: italic;
+    color: #555;
+    margin-top: 20px;
+    padding: 10px;
+    border-left: 4px solid #00796b;
+    background-color: #f9f9f9;
+  }
+  
+  @media (max-width: 768px) {
+    .step-bar {
+      flex-direction: column;
+    }
+  
+    .step {
+      margin-bottom: 10px;
+    }
+  }
+  
